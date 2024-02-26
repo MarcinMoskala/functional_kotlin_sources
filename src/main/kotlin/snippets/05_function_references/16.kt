@@ -1,15 +1,9 @@
 package f_05_function_references.s_16
 
-class StudentId(val value: Int)
-data class UserId(val value: Int) {
-   constructor(studentId: StudentId) : this(studentId.value)
-}
+fun foo(i: Int) = 1
+fun foo(str: String) = "AAA"
 
 fun main() {
-   val intToUserId: (Int) -> UserId = ::UserId
-   println(intToUserId(1)) // UserId(value=1)
-
-   val studentId = StudentId(2)
-   val studentIdToUserId: (StudentId) -> UserId = ::UserId
-   println(studentIdToUserId(studentId)) // UserId(value=2)
+  println(foo(123)) // 1
+  println(foo("")) // AAA
 }

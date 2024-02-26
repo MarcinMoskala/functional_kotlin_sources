@@ -1,7 +1,19 @@
 package f_08_collections_processing_7_associating.s_4
 
-fun main() {
-    val list: List<Int> = listOf(1, 2, 4, 2, 3, 1)
-    val set: Set<Int> = list.toSet()
-    println(set) // [1, 2, 4, 3]
+// distinct implementation from Kotlin stdlib
+fun <T> Iterable<T>.distinct(): List<T> {
+    return this.toMutableSet().toList()
+}
+
+inline fun <T, K> Iterable<T>.distinctBy(
+    selector: (T) -> K
+): List<T> {
+    val set = HashSet<K>()
+    val list = ArrayList<T>()
+    for (e in this) {
+        val key = selector(e)
+        if (set.add(key))
+            list.add(e)
+    }
+    return list
 }

@@ -139,6 +139,7 @@ fun main() {
 
 
 ```
+//7
 fun interface Comparator<T> {
     fun compare(a: T, b: T): Int
 }
@@ -159,7 +160,7 @@ names.sortedWith(Comparator { o1, o2 ->
 
 
 ```
-//7
+//8
 data class FullName(val name: String, val surname: String) {
     override fun toString(): String = "$name $surname"
 }
@@ -232,7 +233,7 @@ fun presentStudentsForTopScores() = students
 
 
 ```
-//8
+//9
 fun main() {
     val list = listOf(4, 2, 3, 1)
     val sortedRes = list.sorted()
@@ -249,7 +250,7 @@ fun main() {
 
 
 ```
-//9
+//10
 fun main() {
     val numbers = listOf(1, 6, 2, 4, 7, 1)
     println(numbers.maxOrNull()) // 7
@@ -259,7 +260,7 @@ fun main() {
 
 
 ```
-//10
+//11
 data class Player(val name: String, val score: Int)
 
 fun main() {
@@ -278,7 +279,7 @@ fun main() {
 
 
 ```
-//11
+//12
 data class FullName(val name: String, val surname: String)
 
 fun main() {
@@ -310,7 +311,7 @@ fun main() {
 
 
 ```
-//12
+//13
 data class Player(val name: String, val score: Int)
 
 fun main() {
@@ -334,7 +335,7 @@ fun main() {
 
 
 ```
-//13
+//14
 import kotlin.random.Random
 
 fun main() {
@@ -356,7 +357,7 @@ fun main() {
 
 
 ```
-//14
+//15
 data class Character(val name: String, val surname: String)
 
 fun main() {

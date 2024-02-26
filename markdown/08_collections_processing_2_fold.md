@@ -1,4 +1,5 @@
 ```
+//1
 // fold implementation from Kotlin stdlib
 inline fun <T, R> Iterable<T>.fold(
     initial: R,
@@ -14,7 +15,7 @@ inline fun <T, R> Iterable<T>.fold(
 
 
 ```
-//1
+//2
 fun main() {
     val numbers = listOf(1, 2, 3, 4)
     val sum = numbers.fold(0) { acc, i -> acc + i }
@@ -28,6 +29,7 @@ fun main() {
 
 
 ```
+//3
 // simplified `filter` implemented with `fold`
 inline fun <T> Iterable<T>.filter(
     predicate: (T) -> Boolean
@@ -48,7 +50,7 @@ inline fun <T, R> Iterable<T>.flatMap(
 
 
 ```
-//2
+//4
 fun main() {
     val numbers = listOf(1, 2, 3, 4, 5)
     println(numbers.sum()) // 15
@@ -58,13 +60,14 @@ fun main() {
 
 
 ```
+//5
 fun Iterable<Int>.product(): Int =
     fold(1) { acc, i -> acc * i }
 ```
 
 
 ```
-//3
+//6
 fun main() {
     val numbers = listOf(1, 2, 3, 4)
     println(numbers.fold(0) { acc, i -> acc + i }) 
@@ -92,6 +95,7 @@ fun main() {
 
 
 ```
+//7
 // simplified reduce implementation from Kotlin stdlib
 public inline fun <S, T : S> Iterable<T>.reduce(
     operation: (acc: S, T) -> S
@@ -111,7 +115,7 @@ public inline fun <S, T : S> Iterable<T>.reduce(
 
 
 ```
-//4
+//8
 fun main() {
     val numbers = listOf(1, 2, 3, 4, 5)
     println(numbers.fold(0) { acc, i -> acc + i }) // 15
@@ -127,6 +131,7 @@ fun main() {
 
 
 ```
+//9
 // simplified sample sum implementation from Kotlin stdlib
 fun Iterable<Int>.sum(): Int {
     var sum: Int = 0
@@ -150,7 +155,7 @@ inline fun <T> Iterable<T>.sumOf(
 
 
 ```
-//5
+//10
 fun main() {
     val numbers = listOf(1, 6, 2, 4, 7, 1)
     println(numbers.sum()) // 21
@@ -166,7 +171,7 @@ fun main() {
 
 
 ```
-//6
+//11
 import java.math.BigDecimal
 
 data class Player(

@@ -1,4 +1,5 @@
 ```
+//1
 fun fetchText(
     onSuccess: (String) -> Unit,
     onFailure: (Throwable) -> Boolean
@@ -13,6 +14,7 @@ fun fetchText(
 
 
 ```
+//2
 fun fetchText(
     onSuccess: (String) -> Unit,
     onFailure: (Throwable) -> Boolean
@@ -26,6 +28,7 @@ fun fetchText(
 
 
 ```
+//3
 fun someOperations(
     onStart: (() -> Unit)? = null,
     onCompletion: (() -> Unit)? = null,
@@ -133,7 +136,7 @@ class Foo {
 
 
 ```
-//1
+//4
 // DON'T DO THAT! Misleading and false type safety
 typealias Minutes = Int
 typealias Seconds = Int
@@ -151,7 +154,7 @@ fun main() {
 
 
 ```
-//2
+//5
 class OnClick : (Int) -> Unit {
     override fun invoke(viewId: Int) {
         // ...

@@ -1,4 +1,5 @@
 ```
+//1
 // a regular function named add1
 fun add1(a: Int, b: Int) = a + b
 
@@ -10,6 +11,7 @@ val add2 = fun(a: Int, b: Int): Int {
 
 
 ```
+//2
 val add2 = fun(a: Int, b: Int) = a + b
 ```
 
@@ -21,7 +23,7 @@ val f = fun <T> (a: T): T = a // COMPILATION ERROR
 
 
 ```
-//1
+//3
 import kotlin.*
 
 data class User(val id: Int)

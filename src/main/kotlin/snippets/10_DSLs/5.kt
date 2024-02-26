@@ -1,10 +1,7 @@
 package f_10_DSLs.s_5
 
-fun main() {
-    val list = buildList {
-        add(1)
-        add(2)
-        add(3)
-    }
-    println(list) // [1, 2, 3]
+// Simplified apply implementation
+inline fun <T> T.apply(block: T.() -> Unit): T {
+    this.block() // same as block.invoke(this)
+    return this
 }

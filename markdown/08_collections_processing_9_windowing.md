@@ -105,6 +105,7 @@ fun main() {
 
 
 ```
+//6
 // chunked implementation from Kotlin stdlib
 fun <T> Iterable<T>.chunked(size: Int): List<List<T>> =
     windowed(size, size, partialWindows = true)
@@ -112,7 +113,7 @@ fun <T> Iterable<T>.chunked(size: Int): List<List<T>> =
 
 
 ```
-//6
+//7
 fun main() {
     val person = listOf("Ashley", "Barbara", "Cyprian", "David")
     println(person.chunked(1))

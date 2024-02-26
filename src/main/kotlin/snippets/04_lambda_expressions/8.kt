@@ -1,12 +1,5 @@
 package f_04_lambda_expressions.s_8
 
-fun call(before: () -> Unit = {}, after: () -> Unit = {}) {
-    before()
-    print("A")
-    after()
-}
+fun sum(a: Int, b: Int) = (a..b).fold(0) { acc, i -> acc + i }
 
-fun main() {
-    call({ print("C") })
-    call { print("B") }
-}
+fun product(a: Int, b: Int) = (a..b).fold(1) { acc, i -> acc * i }

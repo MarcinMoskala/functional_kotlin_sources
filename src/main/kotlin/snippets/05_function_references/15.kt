@@ -1,11 +1,14 @@
 package f_05_function_references.s_15
 
-fun foo(i: Int) = 1
-fun foo(str: String) = "AAA"
+class Drone {
+   fun setOff() {}
+   fun land() {}
+
+   companion object {
+       fun makeDrone(): Drone = Drone()
+   }
+}
 
 fun main() {
-  val fooInt: (Int) -> Int = ::foo
-  println(fooInt(123)) // 1
-  val fooStr: (String) -> String = ::foo
-  println(fooStr("")) // AAA
+   val maker: () -> Drone = Drone.Companion::makeDrone
 }

@@ -12,6 +12,7 @@ val size = File("huge.file").useLines { s ->
 
 
 ```
+//1
 interface Iterable<out T> {
     operator fun iterator(): Iterator<T>
 }
@@ -38,7 +39,7 @@ public fun <T> Sequence<T>.filter(
 
 
 ```
-//1
+//2
 fun main() {
     val seq = sequenceOf(1, 2, 3)
     val filtered = seq.filter { print("f$it "); it % 2 == 1 }
@@ -58,7 +59,7 @@ fun main() {
 
 
 ```
-//2
+//3
 fun main() {
     listOf(1, 2, 3)
         .filter { print("F$it, "); it % 2 == 1 }
@@ -70,7 +71,7 @@ fun main() {
 
 
 ```
-//3
+//4
 fun main() {
     sequenceOf(1, 2, 3)
         .filter { print("F$it, "); it % 2 == 1 }
@@ -82,7 +83,7 @@ fun main() {
 
 
 ```
-//4
+//5
 fun main() {
     for (e in listOf(1, 2, 3)) {
         print("F$e, ")
@@ -98,7 +99,7 @@ fun main() {
 
 
 ```
-//5
+//6
 fun main() {
     val resI = (1..10).asIterable()
         .map { print("M$it "); it * it }
@@ -114,7 +115,7 @@ fun main() {
 
 
 ```
-//6
+//7
 fun main() {
     (1..10).asSequence()
         .filter { print("F$it, "); it % 2 == 1 }
@@ -133,7 +134,7 @@ fun main() {
 
 
 ```
-//7
+//8
 fun main() {
     val s = (1..6).asSequence()
         .filter { print("F$it, "); it % 2 == 1 }
@@ -159,7 +160,7 @@ fun main() {
 
 
 ```
-//8
+//9
 fun main() {
     generateSequence(1) { it + 1 }
         .map { it * 2 }
@@ -171,7 +172,7 @@ fun main() {
 
 
 ```
-//9
+//10
 import java.math.BigInteger
 
 val fibonacci: Sequence<BigInteger> = sequence {

@@ -1,4 +1,5 @@
 ```
+//1
 data class Complex(val real: Double, val imaginary: Double) {
     fun doubled(): Complex =
         Complex(this.real * 2, this.imaginary * 2)
@@ -20,7 +21,7 @@ fun Int.toComplex() = Complex(this.toDouble(), 0.0)
 
 
 ```
-//1
+//2
 fun add(a: Int, b: Int) = a + b
 
 fun main() {
@@ -34,7 +35,7 @@ fun main() {
 
 
 ```
-//2
+//3
 fun add(a: Int, b: Int) = a + b
 
 fun main() {
@@ -47,7 +48,7 @@ fun main() {
 
 
 ```
-//3
+//4
 fun zeroComplex(): Complex = Complex(0.0, 0.0)
 
 fun makeComplex(
@@ -76,7 +77,7 @@ produceComplex2(::makeComplex)
 
 
 ```
-//4
+//5
 data class Number(val num: Int) {
    fun toFloat(): Float = num.toFloat()
    fun times(n: Int): Number = Number(num * n)
@@ -98,6 +99,7 @@ fun main() {
 
 
 ```
+//6
 fun sum(a: Int, b: Int) =
    (a..b).fold(0, Int::plus)
 
@@ -107,7 +109,7 @@ fun product(a: Int, b: Int) =
 
 
 ```
-//5
+//7
 data class Complex(val real: Double, val imaginary: Double) {
    fun doubled(): Complex =
        Complex(this.real * 2, this.imaginary * 2)
@@ -167,7 +169,7 @@ fun main() {
 
 
 ```
-//6
+//8
 class TeamPoints(val points: List<Int>) {
    fun <T> calculatePoints(operation: (List<Int>) -> T): T =
        operation(points)
@@ -193,7 +195,7 @@ fun main() {
 
 
 ```
-//7
+//9
 class Box<T>(private val value: T) {
    fun unbox(): T = value
 }
@@ -207,7 +209,7 @@ fun main() {
 
 
 ```
-//8
+//10
 data class Number(val num: Int) {
    fun toFloat(): Float = num.toFloat()
    fun times(n: Int): Number = Number(num * n)
@@ -258,7 +260,7 @@ fun main() {
 
 
 ```
-//9
+//11
 object SuperUser {
    fun getId() = 0
 }
@@ -302,7 +304,7 @@ class MainPresenter(
 
 
 ```
-//10
+//12
 data class Complex(val real: Double, val imaginary: Double)
 
 fun main() {
@@ -315,7 +317,7 @@ fun main() {
 
 
 ```
-//11
+//13
 class StudentId(val value: Int)
 class UserId(val value: Int) {
    constructor(studentId: StudentId) : this(studentId.value)
@@ -330,7 +332,7 @@ fun main() {
 
 
 ```
-//12
+//14
 object Robot {
    fun moveForward() { 
        /*...*/
@@ -351,7 +353,7 @@ fun main() {
 
 
 ```
-//13
+//15
 class Drone {
    fun setOff() {}
    fun land() {}
@@ -368,7 +370,7 @@ fun main() {
 
 
 ```
-//14
+//16
 fun foo(i: Int) = 1
 fun foo(str: String) = "AAA"
 
@@ -380,7 +382,7 @@ fun main() {
 
 
 ```
-//15
+//17
 fun foo(i: Int) = 1
 fun foo(str: String) = "AAA"
 
@@ -394,7 +396,7 @@ fun main() {
 
 
 ```
-//16
+//18
 class StudentId(val value: Int)
 data class UserId(val value: Int) {
    constructor(studentId: StudentId) : this(studentId.value)
@@ -412,7 +414,7 @@ fun main() {
 
 
 ```
-//17
+//19
 data class Complex(val real: Double, val imaginary: Double)
 
 fun main() {

@@ -1,15 +1,19 @@
 package f_11_scope_functions.s_3
 
-class Node(val name: String) {
+class UserCreationRequest(
+    val id: String,
+    val name: String,
+    val surname: String,
+)
 
-    fun makeChild(childName: String) =
-        create("$name.$childName")
-            .also { print("Created ${it?.name}") }
+class UserDto(
+    val userId: String,
+    val firstName: String,
+    val lastName: String,
+)
 
-    fun create(name: String): Node? = Node(name)
-}
-
-fun main() {
-    val node = Node("parent")
-    node.makeChild("child") // Created child
-}
+fun UserCreationRequest.toUserDto() = UserDto(
+    userId = this.id,
+    firstName = this.name,
+    lastName = this.surname,
+)

@@ -86,6 +86,7 @@ fun produceUserOffers(
 
 
 ```
+//4
 // distinct implementation from Kotlin stdlib
 fun <T> Iterable<T>.distinct(): List<T> {
     return this.toMutableSet().toList()
@@ -107,7 +108,7 @@ inline fun <T, K> Iterable<T>.distinctBy(
 
 
 ```
-//4
+//5
 fun main() {
     val list: List<Int> = listOf(1, 2, 4, 2, 3, 1)
     val set: Set<Int> = list.toSet()
@@ -117,7 +118,7 @@ fun main() {
 
 
 ```
-//5
+//6
 fun main() {
     val numbers = listOf(1, 2, 4, 2, 3, 1)
     println(numbers) // [1, 2, 4, 2, 3, 1]
@@ -131,7 +132,7 @@ fun main() {
 
 
 ```
-//6
+//7
 fun main() {
     val names = listOf("Marta", "Maciek", "Marta", "Daniel")
     println(names) // [Marta, Maciek, Marta, Daniel]
@@ -142,7 +143,7 @@ fun main() {
 
 
 ```
-//7
+//8
 fun main() {
     val names = listOf("Marta", "Maciek", "Daniel")
     println(names)
@@ -156,7 +157,7 @@ fun main() {
 
 
 ```
-//8
+//9
 data class Person(val id: Int, val name: String) {
     override fun toString(): String = "$id: $name"
 }

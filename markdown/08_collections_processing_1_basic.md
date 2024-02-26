@@ -25,6 +25,7 @@ val newsItemAdapters = news
 
 
 ```
+//1
 // forEach implementation from Kotlin stdlib
 inline fun <T> Iterable<T>.forEach(action: (T) -> Unit) {
    for (element in this) action(element)
@@ -68,6 +69,7 @@ users
 
 
 ```
+//2
 // simplified filter implementation from Kotlin stdlib
 inline fun <T> Iterable<T>.filter(
    predicate: (T) -> Boolean
@@ -93,7 +95,7 @@ val publicArticles = articles
 
 
 ```
-//1
+//3
 fun main() {
    val old = listOf(1, 2, 6, 11)
    val new = old.filter { it in 2..10 }
@@ -103,7 +105,7 @@ fun main() {
 
 
 ```
-//2
+//4
 fun main() {
    val old = listOf(1, 2, 6, 11)
    val new = old.filterNot { it in 2..10 }
@@ -113,6 +115,7 @@ fun main() {
 
 
 ```
+//5
 // simplified map implementation from Kotlin stdlib
 inline fun <T, R> Iterable<T>.map(
    transform: (T) -> R
@@ -128,7 +131,7 @@ inline fun <T, R> Iterable<T>.map(
 
 
 ```
-//3
+//6
 fun main() {
    val old = listOf(1, 2, 3, 4)
    val new = old.map { it * it }
@@ -138,7 +141,7 @@ fun main() {
 
 
 ```
-//4
+//7
 fun main() {
    val names: List<String> = listOf("Alex", "Bob", "Carol")
    val nameSizes: List<Int> = names.map { it.length }
@@ -159,6 +162,7 @@ val offerViews = offers
 
 
 ```
+//8
 // simplified mapNotNull implementation from Kotlin stdlib
 inline fun <T, R> Iterable<T>.mapNotNull(
     transform: (T) -> R
@@ -175,7 +179,7 @@ inline fun <T, R> Iterable<T>.mapNotNull(
 
 
 ```
-//5
+//9
 fun main() {
     val old = listOf("1", "A", "2", "3", "B", "4")
     println(old.mapNotNull { it.toIntOrNull() })
@@ -221,6 +225,7 @@ val exchangeUrls: Map<Exchange, String> = exchanges
 
 
 ```
+//10
 // simplified flatMap implementation from Kotlin stdlib
 inline fun <T, R> Iterable<T>.flatMap(
    transform: (T) -> Iterable<R>
@@ -236,7 +241,7 @@ inline fun <T, R> Iterable<T>.flatMap(
 
 
 ```
-//6
+//11
 fun main() {
    val old = listOf(1, 2, 3)
    val new = old.flatMap { listOf(it, it + 10) }
@@ -246,7 +251,7 @@ fun main() {
 
 
 ```
-//7
+//12
 fun main() {
    val names = listOf("Ann", "Bob", "Cale")
    val chars1: List<Char> = names.flatMap { it.toList() }

@@ -1,9 +1,17 @@
 package f_09_sequences.s_2
 
 fun main() {
-    listOf(1, 2, 3)
-        .filter { print("F$it, "); it % 2 == 1 }
-        .map { print("M$it, "); it * 2 }
-        .forEach { print("E$it, ") }
-    // Prints: F1, F2, F3, M1, M3, E2, E6,
+    val seq = sequenceOf(1, 2, 3)
+    val filtered = seq.filter { print("f$it "); it % 2 == 1 }
+    println(filtered)  // FilteringSequence@...
+
+    val asList = filtered.toList() // terminal operation
+    // f1 f2 f3
+    println(asList) // [1, 3]
+
+    val list = listOf(1, 2, 3)
+    val listFiltered = list
+        .filter { print("f$it "); it % 2 == 1 }
+    // f1 f2 f3
+    println(listFiltered) // [1, 3]
 }

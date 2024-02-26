@@ -124,6 +124,7 @@ setOnClickListener { _, _ ->
 
 
 ```
+//8
 fun sum(a: Int, b: Int) = (a..b).fold(0) { acc, i -> acc + i }
 
 fun product(a: Int, b: Int) = (a..b).fold(1) { acc, i -> acc * i }
@@ -131,7 +132,7 @@ fun product(a: Int, b: Int) = (a..b).fold(1) { acc, i -> acc * i }
 
 
 ```
-//8
+//9
 fun call(before: () -> Unit = {}, after: () -> Unit = {}) {
     before()
     print("A")
@@ -154,7 +155,7 @@ fun main() {
 
 
 ```
-//9
+//10
 fun main() {
     val f = {
         10
@@ -197,7 +198,7 @@ fun main() {
 
 
 ```
-//10
+//11
 fun main() {
     val magicSquare = listOf(
         listOf(2, 7, 6),
@@ -219,7 +220,7 @@ fun main() {
 
 
 ```
-//11
+//12
 import kotlin.*
 
 fun main() {
@@ -305,7 +306,7 @@ val newsItemAdapters = news
 
 
 ```
-//12
+//13
 fun makeCounter(): () -> Int {
     var i = 0
     return { i++ }

@@ -1,12 +1,17 @@
 package f_08_collections_processing_6_grouping.s_1
 
-fun main() {
-    val nums = listOf(1, 2, 6, 11)
-    val partitioned: Pair<List<Int>, List<Int>> =
-        nums.partition { it in 2..10 }
-    println(partitioned) // ([2, 6], [1, 11])
-
-    val (inRange, notInRange) = partitioned
-    println(inRange) // [2, 6]
-    println(notInRange) // [1, 11]
+// partition implementation from Kotlin stdlib
+inline fun <T> Iterable<T>.partition(
+    predicate: (T) -> Boolean
+): Pair<List<T>, List<T>> {
+    val first = ArrayList<T>()
+    val second = ArrayList<T>()
+    for (element in this) {
+        if (predicate(element)) {
+            first.add(element)
+        } else {
+            second.add(element)
+        }
+    }
+    return Pair(first, second)
 }

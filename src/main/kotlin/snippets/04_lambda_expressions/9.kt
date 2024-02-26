@@ -1,10 +1,12 @@
 package f_04_lambda_expressions.s_9
 
+fun call(before: () -> Unit = {}, after: () -> Unit = {}) {
+    before()
+    print("A")
+    after()
+}
+
 fun main() {
-    val f = {
-        10
-        20
-        30
-    }
-    println(f()) // 30
+    call({ print("C") })
+    call { print("B") }
 }

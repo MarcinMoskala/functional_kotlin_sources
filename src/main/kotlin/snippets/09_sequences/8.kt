@@ -1,9 +1,23 @@
 package f_09_sequences.s_8
 
 fun main() {
-    generateSequence(1) { it + 1 }
-        .map { it * 2 }
-        .take(10)
-        .forEach { print("$it, ") }
-    // Prints: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
+    val s = (1..6).asSequence()
+        .filter { print("F$it, "); it % 2 == 1 }
+        .map { print("M$it, "); it * 2 }
+
+    s.find { it > 3 } // F1, M1, F2, F3, M3,
+    println()
+    s.find { it > 3 } // F1, M1, F2, F3, M3,
+    println()
+    s.find { it > 3 } // F1, M1, F2, F3, M3,
+    println()
+
+    val l = (1..6)
+        .filter { print("F$it, "); it % 2 == 1 }
+        .map { print("M$it, "); it * 2 }
+    // F1, F2, F3, F4, F5, F6, M1, M3, M5,
+
+    l.find { it > 3 } // prints nothing
+    l.find { it > 3 } // prints nothing
+    l.find { it > 3 } // prints nothing
 }

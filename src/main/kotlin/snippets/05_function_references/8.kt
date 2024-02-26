@@ -1,17 +1,23 @@
 package f_05_function_references.s_8
 
-data class Number(val num: Int) {
-   fun toFloat(): Float = num.toFloat()
-   fun times(n: Int): Number = Number(num * n)
+class TeamPoints(val points: List<Int>) {
+   fun <T> calculatePoints(operation: (List<Int>) -> T): T =
+       operation(points)
 }
 
 fun main() {
-   val num = Number(10)
-   // bounded function reference
-   val getNumAsFloat: () -> Float = num::toFloat
-   // There is no need for receiver type in function type,
-   // because reference is already bound to an object
-   println(getNumAsFloat()) // 10.0
-   val multiplyNum: (Int) -> Number = num::times
-   println(multiplyNum(4)) // Number(num = 40.0)
+   val teamPoints = TeamPoints(listOf(1, 3, 5))
+
+   val sum = teamPoints
+       .calculatePoints(List<Int>::sum)
+   println(sum) // 9
+
+   val avg = teamPoints
+       .calculatePoints(List<Int>::average)
+   println(avg) // 3.0
+
+   val invalid = String?::isNullOrBlank
+   println(invalid(null)) // true
+   println(invalid("  ")) // true
+   println(invalid("AAA")) // false
 }

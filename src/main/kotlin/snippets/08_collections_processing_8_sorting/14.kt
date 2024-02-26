@@ -1,17 +1,19 @@
 package f_08_collections_processing_8_sorting.s_14
 
-data class Character(val name: String, val surname: String)
+import kotlin.random.Random
 
 fun main() {
-    val characters = listOf(
-        Character("Tamara", "Kurczak"),
-        Character("Earl", "Gey"),
-        Character("Ryba", "Luna"),
-        Character("Cookie", "DePies"),
-    )
-    println(characters.random())
-    // A random character,
-    // like Character(name=Ryba, surname=Luna)
-    println(characters.shuffled())
-    // List with characters in a random order
+    val range = (1..100)
+    val list = range.toList()
+
+    // `random` requires a collection
+    println(list.random()) // random number from 1 to 100
+    println(list.randomOrNull())
+    // random number from 1 to 100
+
+    println(list.random(Random(123))) // 7
+    println(list.randomOrNull(Random(123))) // 7
+
+    println(range.shuffled())
+    // List with numbers in a random order
 }

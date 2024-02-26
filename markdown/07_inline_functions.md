@@ -182,6 +182,7 @@ fun main() {
 
 
 ```
+//8
 inline fun requestNewToken(
     hasToken: Boolean,
     crossinline onRefresh: () -> Unit,
@@ -224,7 +225,7 @@ fun <T> isOfType(value: Any): Boolean =
 
 
 ```
-//8
+//9
 inline fun <reified T> printTypeName() {
     print(T::class.simpleName)
 }
@@ -238,7 +239,7 @@ fun main() {
 
 
 ```
-//9
+//10
 fun main() {
     print(Int::class.simpleName) // Int
     print(Char::class.simpleName) // Char
@@ -248,6 +249,7 @@ fun main() {
 
 
 ```
+//11
 class Worker
 class Manager
 
@@ -307,7 +309,7 @@ fun setBirthday(user: User, value: Date) {
 
 
 ```
-//10
+//12
 class User(val name: String, val surname: String) {
    inline val fullName: String get() = "$name $surname"
 }

@@ -1,4 +1,5 @@
 ```
+//1
 /** read value from environment,
  * or null if failed or not present */
 fun envOrNull(name: String): String? =
@@ -35,6 +36,7 @@ fun config3(): Config? = nullable.eager {
 
 
 ```
+//2
 fun add(a: String, b: String): Int? {
     val x = a.toIntOrNull() ?: return null
     val y = b.toIntOrNull() ?: return null
@@ -44,6 +46,7 @@ fun add(a: String, b: String): Int? {
 
 
 ```
+//3
 fun envOrNull(name: String): Result<String?> = runCatching {
     System.getenv(name)
 }
@@ -65,6 +68,7 @@ fun config4(): Result<Config> = result.eager {
 
 
 ```
+//4
 sealed class Either<out E, out A> {
     data class Left<E>(val value: E) : Either<E, Nothing>()
     data class Right<A>(val value: A) : Either<Nothing, A>()
@@ -73,6 +77,7 @@ sealed class Either<out E, out A> {
 
 
 ```
+//5
 sealed interface ConfigError
 data class SystemError(val underlying: Throwable)
 object PortNotAvailable : ConfigError

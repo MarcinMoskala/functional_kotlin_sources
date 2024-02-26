@@ -1,7 +1,11 @@
 package f_07_inline_functions.s_9
 
+inline fun <reified T> printTypeName() {
+    print(T::class.simpleName)
+}
+
 fun main() {
-    print(Int::class.simpleName) // Int
-    print(Char::class.simpleName) // Char
-    print(String::class.simpleName) // String
+    printTypeName<Int>() // Int
+    printTypeName<Char>() // Char
+    printTypeName<String>() // String
 }

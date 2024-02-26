@@ -196,6 +196,7 @@ fun main() {
 
 
 ```
+//5
 // Simplified apply implementation
 inline fun <T> T.apply(block: T.() -> Unit): T {
     this.block() // same as block.invoke(this)
@@ -226,7 +227,7 @@ fun showDialog(init: Dialog.() -> Unit) {
 
 
 ```
-//5
+//6
 fun main() {
     val list = buildList {
         add(1)
@@ -239,6 +240,7 @@ fun main() {
 
 
 ```
+//7
 fun <T> buildList(init: MutableList<T>.() -> Unit): List<T>{
     val list = mutableListOf<T>()
     list.init()
@@ -269,7 +271,7 @@ private const val SEC_IN_MINUE = 60
 
 
 ```
-//6
+//8
 fun main() {
     val string = buildString {
         append("A")
@@ -282,6 +284,7 @@ fun main() {
 
 
 ```
+//9
 class Dialog {
     var title: String = ""
     var message: String = ""
@@ -339,7 +342,7 @@ fun main() {
 
 
 ```
-//7
+//10
 class Dialog {
     var title: String = ""
     var message: String = ""
@@ -404,6 +407,7 @@ fun main() {
 
 
 ```
+//11
 @DslMarker
 annotation class DialogDsl
 
@@ -480,6 +484,7 @@ class HtmlBuilder {
 
 
 ```
+//12
 class HeadBuilder {
     var title: String = ""
 
@@ -491,6 +496,7 @@ class HeadBuilder {
 
 
 ```
+//13
 class BodyBuilder {
     fun h1(text: String) {
         /*...*/
@@ -508,6 +514,7 @@ class BodyBuilder {
 
 
 ```
+//14
 class HeadBuilder {
     var title: String = ""
     private var styles: List<String> = emptyList()
@@ -520,6 +527,7 @@ class HeadBuilder {
 
 
 ```
+//15
 class BodyBuilder {
     private var elements: List<BodyElement> = emptyList()
 
@@ -575,7 +583,7 @@ class HtmlBuilder {
 
 
 ```
-//8
+//16
 // DSL definition
 @DslMarker
 annotation class HtmlDsl

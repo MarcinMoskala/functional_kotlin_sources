@@ -15,6 +15,7 @@ people.filter { !goodString(it.name) }
 
 
 ```
+//1
 fun String.isPrefixOf(s: String) = s.startsWith(this)
 ```
 
@@ -25,6 +26,7 @@ fun String.isPrefixOf(s: String) = s.startsWith(this)
 
 
 ```
+//2
 val fibonacci = DeepRecursiveFunction<Int, Int> { x ->
     when {
         x < 0 -> 0

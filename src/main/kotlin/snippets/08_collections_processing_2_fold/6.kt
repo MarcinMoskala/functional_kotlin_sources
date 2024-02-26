@@ -1,23 +1,25 @@
 package f_08_collections_processing_2_fold.s_6
 
-import java.math.BigDecimal
-
-data class Player(
-    val name: String,
-    val points: Int,
-    val money: BigDecimal,
-)
-
 fun main() {
-    val players = listOf(
-        Player("Jake", 234, BigDecimal("2.30")),
-        Player("Megan", 567, BigDecimal("1.50")),
-        Player("Beth", 123, BigDecimal("0.00")),
-    )
+    val numbers = listOf(1, 2, 3, 4)
+    println(numbers.fold(0) { acc, i -> acc + i }) 
+    // 10
+    println(numbers.scan(0) { acc, i -> acc + i })
+    // [0, 1, 3, 6, 10]
+    println(numbers.runningFold(0) { acc, i -> acc + i })
+    // [0, 1, 3, 6, 10]
 
-    println(players.map { it.points }.sum()) // 924
-    println(players.sumOf { it.points }) // 924
+    println(numbers.fold("") { acc, i -> acc + i }) 
+    // 1234
+    println(numbers.scan("") { acc, i -> acc + i })
+    // [, 1, 12, 123, 1234]
+    println(numbers.runningFold("") { acc, i -> acc + i })
+    // [, 1, 12, 123, 1234]
 
-    // Works for `BigDecimal` as well
-    println(players.sumOf { it.money }) // 3.80
+    println(numbers.fold(1) { acc, i -> acc * i }) 
+    // 24
+    println(numbers.scan(1) { acc, i -> acc * i })
+    // [1, 1, 2, 6, 24]
+    println(numbers.runningFold(1) { acc, i -> acc * i })
+    // [1, 1, 2, 6, 24]
 }

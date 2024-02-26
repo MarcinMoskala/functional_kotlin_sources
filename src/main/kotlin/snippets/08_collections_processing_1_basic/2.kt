@@ -1,7 +1,14 @@
 package f_08_collections_processing_1_basic.s_2
 
-fun main() {
-   val old = listOf(1, 2, 6, 11)
-   val new = old.filterNot { it in 2..10 }
-   println(new) // [1, 11]
+// simplified filter implementation from Kotlin stdlib
+inline fun <T> Iterable<T>.filter(
+   predicate: (T) -> Boolean
+): List<T> {
+   val destination = ArrayList<T>()
+   for (element in this) {
+       if (predicate(element)) {
+           destination.add(element)
+       }
+   }
+   return destination
 }

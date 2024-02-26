@@ -1,9 +1,18 @@
 package f_05_function_references.s_14
 
-fun foo(i: Int) = 1
-fun foo(str: String) = "AAA"
+object Robot {
+   fun moveForward() { 
+       /*...*/
+   }
+   fun moveBackward() { 
+       /*...*/
+   }
+}
 
 fun main() {
-  println(foo(123)) // 1
-  println(foo("")) // AAA
+   Robot.moveForward()
+   Robot.moveBackward()
+
+   val action1: () -> Unit = Robot::moveForward
+   val action2: () -> Unit = Robot::moveBackward
 }

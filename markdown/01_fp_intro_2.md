@@ -66,6 +66,7 @@ public class RangeOperations {
 
 
 ```
+//2
 fun sum(a: Int, b: Int) = fold(a, b, 0, { acc, i -> acc + i })
 
 fun product(a: Int, b: Int) = fold(a, b, 1, { acc, i -> acc * i })
@@ -86,6 +87,7 @@ fun fold(
 
 
 ```
+//3
 fun sum(a: Int, b: Int) = (a..b).fold(0) { acc, i -> acc + i }
 
 fun product(a: Int, b: Int) = (a..b).fold(1) { acc, i -> acc * i }
@@ -93,6 +95,7 @@ fun product(a: Int, b: Int) = (a..b).fold(1) { acc, i -> acc * i }
 
 
 ```
+//4
 fun sum(a: Int, b: Int) = (a..b).fold(0, Int::plus)
 
 fun product(a: Int, b: Int) = (a..b).fold(1, Int::times)
@@ -100,6 +103,7 @@ fun product(a: Int, b: Int) = (a..b).fold(1, Int::times)
 
 
 ```
+//5
 fun sum(a: Int, b: Int) = (a..b).sum()
 
 fun product(a: Int, b: Int) = (a..b).fold(1, Int::times)

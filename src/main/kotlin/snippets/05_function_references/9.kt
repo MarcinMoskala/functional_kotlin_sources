@@ -1,18 +1,11 @@
 package f_05_function_references.s_9
 
-object SuperUser {
-   fun getId() = 0
+class Box<T>(private val value: T) {
+   fun unbox(): T = value
 }
 
 fun main() {
-   val myId = SuperUser::getId
-   println(myId()) // 0
-
-   val obj = object {
-       fun cheer() {
-           println("Hello")
-       }
-   }
-   val f = obj::cheer
-   f() // Hello
+   val unbox = Box<String>::unbox
+   val box = Box("AAA")
+   println(unbox(box)) // AAA
 }

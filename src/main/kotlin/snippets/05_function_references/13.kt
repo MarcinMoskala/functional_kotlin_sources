@@ -1,14 +1,12 @@
 package f_05_function_references.s_13
 
-class Drone {
-   fun setOff() {}
-   fun land() {}
-
-   companion object {
-       fun makeDrone(): Drone = Drone()
-   }
+class StudentId(val value: Int)
+class UserId(val value: Int) {
+   constructor(studentId: StudentId) : this(studentId.value)
 }
 
 fun main() {
-   val maker: () -> Drone = Drone.Companion::makeDrone
+   val ints: List<Int> = listOf(1, 1, 2, 3, 5, 8)
+   val studentIds: List<StudentId> = ints.map(::StudentId)
+   val userIds: List<UserId> = studentIds.map(::UserId)
 }

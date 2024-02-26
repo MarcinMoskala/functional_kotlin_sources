@@ -1,11 +1,12 @@
 ```
+//1
 // `let` implementation without contract
 inline fun <T, R> T.let(block: (T) -> R): R = block(this)
 ```
 
 
 ```
-//1
+//2
 fun main() {
     println(listOf("a", "b", "c").map { it.uppercase() })
     // [A, B, C]
@@ -66,6 +67,7 @@ class CoursesService(
 
 
 ```
+//3
 class UserCreationRequest(
     val id: String,
     val name: String,
@@ -209,6 +211,7 @@ FileInputStream("/someFile.gz")
 
 
 ```
+//4
 class User(val name: String)
 
 var user: User? = null
@@ -232,6 +235,7 @@ fun showUserNameIfPresent() {
 
 
 ```
+//5
 // `also` implementation without contract
 inline fun <T> T.also(block: (T) -> Unit): T {
     block(this)
@@ -288,6 +292,7 @@ fun readAndPrint() {
 
 
 ```
+//6
 // `takeIf` implementation without contract
 inline fun <T> T.takeIf(predicate: (T) -> Boolean): T? {
     return if (predicate(this)) this else null
@@ -320,6 +325,7 @@ class UserCreationService(
 
 
 ```
+//7
 // `apply` implementation without contract
 inline fun <T> T.apply(block: T.() -> Unit): T {
     block()
@@ -345,7 +351,7 @@ fun showUsers(users: List<User>) {
 
 
 ```
-//2
+//8
 class Node(val name: String) {
 
     fun makeChild(childName: String) =
@@ -363,7 +369,7 @@ fun main() {
 
 
 ```
-//3
+//9
 class Node(val name: String) {
 
     fun makeChild(childName: String) =
@@ -381,6 +387,7 @@ fun main() {
 
 
 ```
+//10
 // `with` implementation without contract
 inline fun <T, R> with(receiver: T, block: T.() -> R): R =
     receiver.block()
@@ -412,6 +419,7 @@ with(user) {
 
 
 ```
+//11
 // `run` implementation without contract
 inline fun <R> run(block: () -> R): R = block()
 

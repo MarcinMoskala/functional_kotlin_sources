@@ -1,4 +1,5 @@
 ```
+//1
 // partition implementation from Kotlin stdlib
 inline fun <T> Iterable<T>.partition(
     predicate: (T) -> Boolean
@@ -18,7 +19,7 @@ inline fun <T> Iterable<T>.partition(
 
 
 ```
-//1
+//2
 fun main() {
     val nums = listOf(1, 2, 6, 11)
     val partitioned: Pair<List<Int>, List<Int>> =
@@ -33,7 +34,7 @@ fun main() {
 
 
 ```
-//2
+//3
 fun main() {
     val nums = (1..10).toList()
 
@@ -59,6 +60,7 @@ fun main() {
 
 
 ```
+//4
 // groupBy implementation from Kotlin stdlib
 inline fun <T, K> Iterable<T>.groupBy(
     keySelector: (T) -> K
@@ -77,7 +79,7 @@ inline fun <T, K> Iterable<T>.groupBy(
 
 
 ```
-//3
+//5
 fun main() {
     val names = listOf("Marcin", "Maja", "Cookie")
 
@@ -115,7 +117,7 @@ val bestResolutionPerQuality: Map<Quality, Resolution> =
 
 
 ```
-//4
+//6
 data class Player(val name: String, val team: String)
 
 fun main() {
