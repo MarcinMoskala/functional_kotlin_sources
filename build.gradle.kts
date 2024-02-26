@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.9.10"
     java
 }
 
@@ -14,6 +14,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+    implementation("io.arrow-kt:arrow-core:1.2.0")
     implementation("junit:junit:4.13.1")
     implementation(kotlin("test"))
     implementation("io.mockk:mockk:1.12.2")
