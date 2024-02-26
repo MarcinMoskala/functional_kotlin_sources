@@ -1,13 +1,7 @@
 package f_08_collections_processing_8_sorting.s_5
 
 fun main() {
-    val names = listOf("Alex", "Bob", "Celine")
-
-    // Sort by name length
-    println(names.sortedByDescending { it.length })
-    // [Celine, Alex, Bob]
-
-    // Sort by last letter
-    println(names.sortedByDescending { it.last() })
-    // [Alex, Celine, Bob]
+    val names = listOf("Ben", "Bob", "Bass", "Alex")
+    val sorted = names.sortedBy { it.first() }
+    println(sorted) // [Alex, Ben, Bob, Bass]
 }

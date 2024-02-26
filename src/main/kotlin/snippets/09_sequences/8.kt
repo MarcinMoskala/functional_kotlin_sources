@@ -1,14 +1,9 @@
 package f_09_sequences.s_8
 
-class Product(val bought: Boolean)
-val productsList = listOf<Product>()
-
-fun singleStepListProcessing(): List<Product> {
-    return productsList.filter { it.bought }
-}
-
-fun singleStepSequenceProcessing(): List<Product> {
-    return productsList.asSequence()
-        .filter { it.bought }
-        .toList()
+fun main() {
+    generateSequence(1) { it + 1 }
+        .map { it * 2 }
+        .take(10)
+        .forEach { print("$it, ") }
+    // Prints: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
 }

@@ -5,7 +5,7 @@ fun main() {
     val filtered = seq.filter { print("f$it "); it % 2 == 1 }
     println(filtered)  // FilteringSequence@...
 
-    val asList = filtered.toList()
+    val asList = filtered.toList() // terminal operation
     // f1 f2 f3
     println(asList) // [1, 3]
 

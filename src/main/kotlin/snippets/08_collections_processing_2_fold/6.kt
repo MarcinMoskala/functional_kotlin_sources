@@ -1,13 +1,23 @@
 package f_08_collections_processing_2_fold.s_6
 
+import java.math.BigDecimal
+
+data class Player(
+    val name: String,
+    val points: Int,
+    val money: BigDecimal,
+)
+
 fun main() {
-    val numbers = listOf(1, 6, 2, 4, 7, 1)
-    println(numbers.sum()) // 21
+    val players = listOf(
+        Player("Jake", 234, BigDecimal("2.30")),
+        Player("Megan", 567, BigDecimal("1.50")),
+        Player("Beth", 123, BigDecimal("0.00")),
+    )
 
-    val doubles = listOf(0.1, 0.6, 0.2, 0.4, 0.7)
-    println(doubles.sum()) // 1.9999999999999998
-    // It is not 2, due to limited JVM double representation
+    println(players.map { it.points }.sum()) // 924
+    println(players.sumOf { it.points }) // 924
 
-    val bytes = listOf<Byte>(1, 4, 2, 4, 5)
-    println(bytes.sum()) // 16
+    // Works for `BigDecimal` as well
+    println(players.sumOf { it.money }) // 3.80
 }

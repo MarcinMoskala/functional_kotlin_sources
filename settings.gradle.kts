@@ -1,2 +1,2 @@
-rootProject.name = "Coroutines Sources"
+rootProject.name = "Functional Kotlin Sources"
 

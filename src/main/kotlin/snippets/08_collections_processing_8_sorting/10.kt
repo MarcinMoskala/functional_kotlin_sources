@@ -1,14 +1,16 @@
 package f_08_collections_processing_8_sorting.s_10
 
+data class Player(val name: String, val score: Int)
+
 fun main() {
-    val range = (1..100)
-    val list = range.toList()
+    val players = listOf(
+        Player("Jake", 234),
+        Player("Megan", 567),
+        Player("Beth", 123),
+    )
 
-    // `random` requires a collection
-    println(list.random()) // random number from 1 to 100
-    println(list.randomOrNull())
-    // random number from 1 to 100
-
-    println(range.shuffled())
-    // List with numbers in a random order
+    println(players.maxByOrNull { it.score })
+    // Player(name=Megan, score=567)
+    println(players.minByOrNull { it.score })
+    // Player(name=Beth, score=123)
 }

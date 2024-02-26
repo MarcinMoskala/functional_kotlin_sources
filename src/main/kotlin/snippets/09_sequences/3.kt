@@ -1,13 +1,9 @@
 package f_09_sequences.s_3
 
 fun main() {
-    for (e in listOf(1, 2, 3)) {
-        print("F$e, ")
-        if (e % 2 == 1) {
-            print("M$e, ")
-            val mapped = e * 2
-            print("E$mapped, ")
-        }
-    }
+    sequenceOf(1, 2, 3)
+        .filter { print("F$it, "); it % 2 == 1 }
+        .map { print("M$it, "); it * 2 }
+        .forEach { print("E$it, ") }
     // Prints: F1, M1, E2, F2, F3, M3, E6,
 }

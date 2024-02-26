@@ -1,12 +1,12 @@
 package f_08_collections_processing_5_find.s_3
 
-class User(val id: String)
-val users = listOf<User>()
-class Configuration(val name: String)
-val configurations = listOf<Configuration>()
+fun main() {
+    val names = listOf("Cookie", "Figa")
 
-fun getUser(id: String): User? =
-    users.find { it.id == id }
+    println(names.find { it.first() == 'A' }) // null
+    println(names.firstOrNull { it.first() == 'A' }) // null
+    println(names.find { it.first() == 'C' }) // Cookie
+    println(names.firstOrNull { it.first() == 'C' }) // Cookie
 
-fun findUser(name: String): Configuration? =
-    configurations.find { it.name == name }
+    println(listOf(1, 2, 6, 11).find { it in 2..10 }) // 2
+}

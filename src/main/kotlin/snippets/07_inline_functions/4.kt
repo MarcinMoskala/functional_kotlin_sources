@@ -1,9 +1,9 @@
 package f_07_inline_functions.s_4
 
 fun main() {
-    repeat(7) {
-        print("Na")
+    for (i in 0 until 10) {
+        if (i == 4) return // Returns from main
+        print(i)
     }
-    println(" Batman")
 }
-// NaNaNaNaNaNaNa Batman
+// 0123

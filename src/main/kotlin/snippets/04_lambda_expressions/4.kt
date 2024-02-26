@@ -6,6 +6,8 @@ fun produceNum() = 42
 fun main() {
     val f = produceFun()
     println(f()) // 42
+    println(produceFun()()) // 42
+    println(produceFun().invoke()) // 42
 
     println(produceNum()) // 42
 }

@@ -1,9 +1,11 @@
 package f_07_inline_functions.s_8
 
-fun main() {
-    (0 until 19).forEach { index ->
-        if (index == 4) return // Returns from main
-        print(index)
-    }
+inline fun <reified T> printTypeName() {
+    print(T::class.simpleName)
 }
-// 0123
+
+fun main() {
+    printTypeName<Int>() // Int
+    printTypeName<Char>() // Char
+    printTypeName<String>() // String
+}

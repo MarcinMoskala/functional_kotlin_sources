@@ -1,7 +1,7 @@
 package f_07_inline_functions.s_6
 
 fun main() {
-    repeat(10) { index ->
+    for (index in 0 until 10) {
         if (index == 4) return // Returns from main
         print(index)
     }

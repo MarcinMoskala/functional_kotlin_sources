@@ -7,5 +7,5 @@ fun main() {
         }
     } // the type is (text: String, times: Int) -> Unit
     printTimes("Na", 7) // NaNaNaNaNaNaNa
-    printTimes.invoke("Batman", 1) // Batman
+    printTimes.invoke("Batman", 2) // BatmanBatman
 }

@@ -2,6 +2,9 @@ package f_03_anonymous_functions.s_1
 
 import kotlin.*
 
+data class User(val id: Int)
+data class Name(val name: String)
+
 fun main() {
     val cheer: () -> Unit = fun() {
         println("Hello")
@@ -23,9 +26,7 @@ fun main() {
     // [UserService] Name changed
     log("UserService", "Surname changed")
     // [UserService] Surname changed
-
-    data class User(val id: Int)
-
+    
     val makeAdmin: () -> User = fun() = User(id = 0)
     println(makeAdmin()) // User(id=0)
 
@@ -35,11 +36,8 @@ fun main() {
         }
     println(add.invoke("A", "B")) // AB
     println(add("C", "D")) // CD
-
-    data class Name(val name: String)
-
-    val toName: (String) -> Name =
-        fun(name: String) = Name(name)
+    
+    val toName: (String) -> Name = fun(name: String) = Name(name)
     val name: Name = toName("Cookie")
     println(name) // Name(name=Cookie)
 }

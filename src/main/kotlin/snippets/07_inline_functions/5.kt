@@ -1,9 +1,9 @@
 package f_07_inline_functions.s_5
 
 fun main() {
-    for (i in 0 until 10) {
-        if (i == 4) return // Returns from main
-        print(i)
+    repeat(10) { index ->
+        if (index == 4) return // Returns from main
+        print(index)
     }
 }
 // 0123

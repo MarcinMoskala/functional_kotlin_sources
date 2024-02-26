@@ -1,13 +1,13 @@
 package f_08_collections_processing_2_fold.s_5
 
 fun main() {
-    val numbers = listOf(1, 2, 3, 4, 5)
-    println(numbers.fold(0) { acc, i -> acc + i }) // 15
-    println(numbers.reduce { acc, i -> acc + i }) // 15
+    val numbers = listOf(1, 6, 2, 4, 7, 1)
+    println(numbers.sum()) // 21
 
-    println(numbers.fold("") { acc, i -> acc + i }) // 12345
-    // Here `reduce` cannot be used instead of `fold`
+    val doubles = listOf(0.1, 0.6, 0.2, 0.4, 0.7)
+    println(doubles.sum()) // 1.9999999999999998
+    // It is not 2, due to limited JVM double representation
 
-    println(numbers.fold(1) { acc, i -> acc * i }) // 120
-    println(numbers.reduce { acc, i -> acc * i }) // 120
+    val bytes = listOf<Byte>(1, 4, 2, 4, 5)
+    println(bytes.sum()) // 16
 }

@@ -1,4 +1,7 @@
 package f_08_collections_processing_9_windowing.s_4
 
-fun <T> Iterable<T>.chunked(size: Int): List<List<T>> =
-    windowed(size, size, partialWindows = true)
+fun main() {
+    val person = listOf("A", "B", "C", "D", "E")
+    println(person.zipWithNext { prev, next -> "$prev$next" })
+    // [AB, BC, CD, DE]
+}

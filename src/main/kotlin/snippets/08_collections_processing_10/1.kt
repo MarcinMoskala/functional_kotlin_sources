@@ -12,11 +12,6 @@ fun main() {
     // Maja, Norbert, ...
     println(names.joinToString(limit = 2, truncated = "etc."))
     // Maja, Norbert, etc.
-    println(
-        names.joinToString(
-            prefix = "{names=[",
-            postfix = "]}"
-        )
-    )
+    println(names.joinToString(prefix = "{names=[", postfix="]}"))
     // {names=[Maja, Norbert, Ola]}
 }

@@ -1,8 +1,7 @@
 package f_07_inline_functions.s_9
 
-fun <T> printTypeName() {
-//    print(T::class.simpleName) // ERROR
+fun main() {
+    print(Int::class.simpleName) // Int
+    print(Char::class.simpleName) // Char
+    print(String::class.simpleName) // String
 }
-
-//fun <T> isOfType(value: Any): Boolean =
-//    value is T // ERROR

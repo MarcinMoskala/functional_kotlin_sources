@@ -1,7 +1,7 @@
 package f_07_inline_functions.s_7
 
 fun main() {
-    for (index in 0 until 10) {
+    (0 until 19).forEach { index ->
         if (index == 4) return // Returns from main
         print(index)
     }
