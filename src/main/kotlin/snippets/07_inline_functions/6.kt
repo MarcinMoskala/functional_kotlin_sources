@@ -6,4 +6,3 @@ fun main() {
         print(index)
     }
 }
-// 0123

@@ -1,6 +1,5 @@
 package f_10_DSLs.s_16
 
-// DSL definition
 @DslMarker
 annotation class HtmlDsl
 
@@ -89,7 +88,6 @@ data class Text(val text: String) : BodyElement {
     override fun toString(): String = text
 }
 
-// DSL usage
 val html = html {
     head {
         title = "My website"

@@ -7,5 +7,3 @@ fun main() {
         .map { (index, value) -> "[$index] $value" }
         .forEach { println(it) }
 }
-// [0] A
-// [2] C

@@ -1,6 +1,5 @@
 package f_08_collections_processing_6_grouping.s_1
 
-// partition implementation from Kotlin stdlib
 inline fun <T> Iterable<T>.partition(
     predicate: (T) -> Boolean
 ): Pair<List<T>, List<T>> {

@@ -6,4 +6,3 @@ fun main() {
     }
     println(" Batman")
 }
-// NaNaNaNaNaNaNa Batman

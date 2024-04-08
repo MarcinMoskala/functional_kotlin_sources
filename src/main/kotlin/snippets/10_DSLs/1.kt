@@ -1,6 +1,5 @@
 package f_10_DSLs.s_1
 
-// Named extension function
 fun String.myPlus1(other: String) = this + other
 
 fun main() {

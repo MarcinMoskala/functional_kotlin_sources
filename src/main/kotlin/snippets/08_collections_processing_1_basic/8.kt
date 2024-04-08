@@ -1,6 +1,5 @@
 package f_08_collections_processing_1_basic.s_8
 
-// simplified mapNotNull implementation from Kotlin stdlib
 inline fun <T, R> Iterable<T>.mapNotNull(
     transform: (T) -> R
 ): List<R> {

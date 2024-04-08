@@ -1,6 +1,5 @@
 package f_08_collections_processing_7_associating.s_4
 
-// distinct implementation from Kotlin stdlib
 fun <T> Iterable<T>.distinct(): List<T> {
     return this.toMutableSet().toList()
 }

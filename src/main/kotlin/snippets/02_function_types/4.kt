@@ -1,6 +1,5 @@
 package f_02_function_types.s_4
 
-// DON'T DO THAT! Misleading and false type safety
 typealias Minutes = Int
 typealias Seconds = Int
 

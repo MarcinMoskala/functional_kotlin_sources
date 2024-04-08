@@ -1,6 +1,5 @@
 package f_08_collections_processing_6_grouping.s_4
 
-// groupBy implementation from Kotlin stdlib
 inline fun <T, K> Iterable<T>.groupBy(
     keySelector: (T) -> K
 ): Map<K, List<T>> {

@@ -1,6 +1,5 @@
 package f_08_collections_processing_2_fold.s_7
 
-// simplified reduce implementation from Kotlin stdlib
 public inline fun <S, T : S> Iterable<T>.reduce(
     operation: (acc: S, T) -> S
 ): S {
